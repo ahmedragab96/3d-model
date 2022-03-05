@@ -2,6 +2,7 @@ import React, { Suspense } from 'react';
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import Model from './components/model/Model';
+import ModelFemale from './components/model/Model-female';
 
 export default function App() {
    return (
@@ -18,6 +19,7 @@ export default function App() {
          <directionalLight intensity={0.4} />
          <Suspense fallback={null}>
             <Model position={[0.025, -0.9, 0]} />
+            <ModelFemale position={[2, -0.9, 4]} />
          </Suspense>
          <OrbitControls />
       </Canvas>
